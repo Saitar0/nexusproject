@@ -26,13 +26,13 @@ jobs:
         run: npm run tauri build
       
       - name: Upload MSI
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-msi
           path: src-tauri/target/release/bundle/msi/
       
       - name: Upload EXE
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-exe
           path: src-tauri/target/release/bundle/nsis/
@@ -62,13 +62,13 @@ jobs:
         run: npm run tauri build
       
       - name: Upload DEB
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: linux-deb
           path: src-tauri/target/release/bundle/deb/
       
       - name: Upload AppImage
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: linux-appimage
           path: src-tauri/target/release/bundle/appimage/
@@ -80,7 +80,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Download Windows artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
