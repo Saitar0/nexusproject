@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "notes": "## Nova Versão 0.2.0\n\n### Novas Funcionalidades:\n- Sistema de updates automático\n- Página de configurações aprimorada\n- Melhorias de performance\n\n### Correções:\n- Corrigidos bugs menores na biblioteca\n- Otimização de downloads\n\n### Conhecidos:\n- Nenhum problema conhecido",
+  "pub_date": "2026-07-15T10:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "SIGNATURE_HERE",
+      "url": "http://seu-servidor.com/updates/MinhaLoja_0.2.0_x64_en-US.msi"
+    },
+    "linux-x86_64": {
+      "signature": "SIGNATURE_HERE",
+      "url": "http://seu-servidor.com/updates/minha-loja_0.2.0_amd64.AppImage"
+    },
+    "darwin-aarch64": {
+      "signature": "SIGNATURE_HERE",
+      "url": "http://seu-servidor.com/updates/MinhaLoja_0.2.0_aarch64.dmg"
+    },
+    "darwin-x86_64": {
+      "signature": "SIGNATURE_HERE",
+      "url": "http://seu-servidor.com/updates/MinhaLoja_0.2.0_x64.dmg"
+    }
+  }
+}

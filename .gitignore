@@ -1,0 +1,61 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tauri build artifacts
+src-tauri/target/
+src-tauri/target/release/bundle/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+.env.*.example
+
+# Update signing keys (NUNCA commitar!)
+src-tauri/.tauri-plugin-updater.priv.key
+.tauri-plugin-updater.priv.key
+update.key
+*.priv.key
+private_key.pem
+
+# Cargo
+Cargo.lock
+
+# Cache
+.cache/
+src-tauri/.cargo
+.tauri-app-cache
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Game files (não commitar downloads de testes)
+AppData/
+instance/
+uploads/
+games/
+
