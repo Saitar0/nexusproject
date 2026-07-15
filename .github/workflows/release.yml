@@ -45,52 +45,8 @@ jobs:
           name: windows-exe
           path: src-tauri/target/release/bundle/nsis/
 
-  build-linux:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
-      
-      - name: Install system deps
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libayatana-appindicator3-dev libfuse2
-      
-      - name: Clean npm cache (Linux)
-        run: |
-          rm -f package-lock.json
-          rm -rf node_modules
-      
-      - name: Install dependencies
-        run: npm install --force --legacy-peer-deps
-      
-      - name: Rebuild native modules (Linux)
-        run: npm rebuild
-      
-      - name: Build Tauri app
-        run: npm run tauri build
-      
-      - name: Upload DEB
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-deb
-          path: src-tauri/target/release/bundle/deb/
-      
-      - name: Upload AppImage
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-appimage
-          path: src-tauri/target/release/bundle/appimage/
-
   create-release:
-    needs: [build-windows, build-linux]
+    needs: [build-windows]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -104,7 +60,5 @@ jobs:
           files: |
             windows-msi/**/*.msi
             windows-exe/**/*.exe
-            linux-deb/**/*.deb
-            linux-appimage/**/*.AppImage
           draft: false
           prerelease: false
