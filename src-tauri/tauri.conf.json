@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "MinhaLoja",
-  "version": "0.1.0",
-  "identifier": "com.saitaro.minhaloja",
+  "productName": "Nexus",
+  "version": "0.2.0",
+  "identifier": "com.saitaro.nexus",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -13,7 +13,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "MinhaLoja",
+        "title": "Nexus",
         "width": 1200,
         "height": 720,
         "minWidth": 1200,
